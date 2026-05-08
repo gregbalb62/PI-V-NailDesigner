@@ -9,7 +9,7 @@ Includes:
 - ESP32 firmware
 - Dashboard
 
-Next steps:
+Passos Incluidos
 - Add JWT endpoints
 - TLS certificates
 - Persist MQTT data in DB
