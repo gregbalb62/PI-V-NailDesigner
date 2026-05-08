@@ -1,0 +1,1 @@
+print('Use django-admin startproject in real scenario')
