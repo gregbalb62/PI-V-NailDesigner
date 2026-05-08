@@ -1,5 +1,15 @@
+
 version: '3.8'
 services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
+
   backend:
     build: ./backend
     ports:
@@ -7,6 +17,7 @@ services:
     depends_on:
       - db
       - mqtt
+
   db:
     image: mysql:8
     environment:
@@ -14,6 +25,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
+
   mqtt:
     image: eclipse-mosquitto
     ports:

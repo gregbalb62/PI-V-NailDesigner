@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard Pro</title>
+<title>Enterprise IoT</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<h2>IoT Industrial Dashboard</h2>
-<canvas id="c"></canvas>
+<h1>Dashboard Enterprise</h1>
+<canvas id="chart"></canvas>
 <script>
 async function load(){
- const res = await fetch("http://localhost:8000/api");
- const data = await res.json();
- new Chart(document.getElementById("c"),{
+ let r = await fetch("/api");
+ let d = await r.json();
+ new Chart(document.getElementById("chart"),{
   type:"line",
-  data:{labels:data.map(d=>d.t),datasets:[{data:data.map(d=>d.p)}]}
+  data:{labels:d.map(x=>x.t),datasets:[{data:d.map(x=>x.p)}]}
  });
 }
-setInterval(load,3000);
+setInterval(load,2000);
 </script>
 </body>
 </html>

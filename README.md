@@ -1,16 +1,16 @@
-# PI-V-NailDesigner
-Repositorio do Projeto Integrador V  -  Blog para uma nail designer
-PRODUCTION FEATURES:
 
-- MQTT (Mosquitto)
-- Docker Compose
-- JWT (implementar no Django)
+ENTERPRISE IOT SYSTEM
+
+Includes:
+- Docker + Nginx
+- Django (production ready base)
 - MySQL
-- ESP32 MQTT publish
-- Dashboard básico
+- MQTT broker
+- ESP32 firmware
+- Dashboard
 
-NEXT:
-- HTTPS (Nginx)
-- TLS MQTT
-- Certificados
-
+Next steps:
+- Add JWT endpoints
+- TLS certificates
+- Persist MQTT data in DB
+- Add alerts
