@@ -1,5 +1,5 @@
 
-ENTERPRISE IOT SYSTEM
+NailDesigner - PI-V
 
 Includes:
 - Docker + Nginx
